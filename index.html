@@ -1,15 +1,11 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="app" itemscope
       itemtype="diehumanisten.page.link/rainerroessler">
 
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
-    <link rel="stylesheet" type="text/css" href="css/build/pages/dvcard/template_normal.min837e.css?v=1.233" />
+    <link rel="stylesheet" type="text/css" href="css/build/pages/dvcard/template_normal.min.css?v=1.233" />
 <script type="text/javascript">
-/*<![CDATA[*/
-YII_CSRF_TOKEN='2d28ba33e9e9342b706054701c1a88d8186b9e75';
-/*]]>*/
 </script>
 <title>Kontaktseite</title>
     <meta charset="utf-8"/>
@@ -229,7 +225,7 @@ YII_CSRF_TOKEN='2d28ba33e9e9342b706054701c1a88d8186b9e75';
                         <div class="table-cell-middle pl-55 pos-relative">
                             <div class="channel-bgd-{{channel.name | toIconName}}">
                                 <i ng-if="channel.name != 'Snapchat'"
-                                   class="icon-social-{{channel.name | toIconName}}"></i>
+                                   class="brand-social-{{channel.name | toIconName}}"></i>
                                 <svg ng-if="channel.name == 'Snapchat'" version="1.1" id="Ebene_1"
                                      xmlns="http://www.w3.org/2000/svg"
                                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px"
@@ -332,19 +328,15 @@ YII_CSRF_TOKEN='2d28ba33e9e9342b706054701c1a88d8186b9e75';
                     data-url="diehumanisten.page.link/rainerroessler"
                     data-text="">
                     <li>
-                        <i class="iconFab icon-fab-share-facebook"></i>
+                        <i class="iconFab brand-fab-share-facebook"></i>
                         <a href="#" class="ssk ssk-text ssk-facebook">Facebook</a>
                     </li>
                     <li>
-                        <i class="iconFab icon-fab-share-twitter"></i>
+                        <i class="iconFab brand-fab-share-twitter"></i>
                         <a href="#" class="ssk ssk-text ssk-twitter">Twitter</a>
                     </li>
                     <li>
-                        <i class="iconFab icon-fab-share-googleplus"></i>
-                        <a href="#" class="ssk ssk-text ssk-google-plus">Google+</a>
-                    </li>
-                    <li>
-                        <i class="iconFab icon-fab-share-whatsapp"></i>
+                        <i class="iconFab brand-fab-share-whatsapp"></i>
                         <a href="whatsapp://send?text=https://diehumanisten.page.link/rainerroessler" class="ssk ssk-whatsapp">Whatsapp</a>
                     </li>
                     <li>
@@ -368,7 +360,7 @@ YII_CSRF_TOKEN='2d28ba33e9e9342b706054701c1a88d8186b9e75';
        ng-click="!loadDemo ?  '' : callAction($event,'shareAction')">
         <span class="hidden-xs">
             <i class="prime icon iconFab icon-fab-share"></i>
-            Diese Seite teilen        </span>
+            Seite teilen        </span>
         <i class="prime icon iconFab icon-fab-share visible-xs"></i>
     </a>
 </div>    </div>
@@ -383,7 +375,7 @@ YII_CSRF_TOKEN='2d28ba33e9e9342b706054701c1a88d8186b9e75';
                     {{gotItText}}
                 </div>
                 <a class="text-regular-blue mt-20" ng-click="closeGotItDialog()">
-                    Ok, verstanden                </a>
+                    Ok.                </a>
             </div>
         </div>
     </div>
@@ -720,6 +712,14 @@ YII_CSRF_TOKEN='2d28ba33e9e9342b706054701c1a88d8186b9e75';
                 input_label_placeholder: 'Bewerte uns',
                 name: "Tripadvisor"
             },
+			{
+                icon: "icon-channel-telegram",
+                type: "url",
+                input_prefix_label: "URL",
+                input_prefix_placeholder: "www.telegram.com",
+                input_label_placeholder: 'Folge uns',
+                name: "Telegram"
+            },
             {
                 icon: "icon-channel-wechat",
                 type: "handle",
@@ -876,7 +876,7 @@ YII_CSRF_TOKEN='2d28ba33e9e9342b706054701c1a88d8186b9e75';
         $scope.loadDemo = parent && typeof parent.ImHere === "function";
 
         //Get the json data form the file
-        json_data = {"show_directions":true,"showPreview":1,"form":[{"section_design":{"fold":false}},{"section_information":{"fold":false}},{"section_social":{"fold":false}},{"section_welcome_screen":[]},{"section_advance_options":{"fold":false}}],"color1":"#01baef","color2":"#e91e63","avatar":"img/photo/photo.png","avatar_extra":{"zoom":100,"background":"#ffffff"},"showAutocomplete":true,"address":{"autocomplete":"30459 Hannover"},"code":{"channels":[{"input_prefix_label":"@","link":"pdh_ni","label":"","name":"Twitter"},{"input_prefix_label":"URL","link":"www.facebook.com\/parteiderhumanisten.ni","label":"","name":"Facebook"},{"input_prefix_label":"@","link":"parteiderhumanisten_ni","label":"","name":"Instagram"}],"welcome_extra":{"zoom":50,"background":"#ffffff"}},"welcome_screen":"img/welcome/heart.png","sharing":true,"show_gradient":true,"color1b":"#e91e63","firstname":"Rainer","lastname":"Rößler","numbers_mobile":"","numbers_phone":"","numbers_fax":"","email":"rainer.roessler@diehumanisten.de","company":"Partei der Humanisten","section":"Landesvorstand Niedersachsen","job":"Landesvorsitzender","website":"www.diehumanisten.de","bio":"Landesvorsitzender"};
+        json_data = {"show_directions":true,"showPreview":1,"form":[{"section_design":{"fold":false}},{"section_information":{"fold":false}},{"section_social":{"fold":false}},{"section_welcome_screen":[]},{"section_advance_options":{"fold":false}}],"color1":"#01baef","color2":"#e91e63","avatar":"img/photo/photo.png","avatar_extra":{"zoom":100,"background":"#ffffff"},"showAutocomplete":true,"address":{"autocomplete":"27729 Holste"},"code":{"channels":[{"input_prefix_label":"@","link":"pdh_ni","label":"","name":"Twitter"},{"input_prefix_label":"URL","link":"www.facebook.com\/parteiderhumanisten.ni","label":"","name":"Facebook"},{"input_prefix_label":"@","link":"parteiderhumanisten_ni","label":"","name":"Instagram"}],"welcome_extra":{"zoom":50,"background":"#ffffff"}},"welcome_screen":"img/welcome/heart.png","sharing":true,"show_gradient":true,"color1b":"#e91e63","firstname":"Rainer","lastname":"Rößler","numbers_mobile":"","numbers_phone":"","numbers_fax":"","email":"rainer.roessler@diehumanisten.de","company":"Partei der Humanisten","section":"Landesvorstand Bremen","job":"Landesvorsitzender","website":"www.diehumanisten.de","bio":"Landesvorsitzender"};
 
 //        //Upgrade old vcards created before 13.04 with show_directions parameter
 //        if (angular.isUndefined(json_data.show_directions))
